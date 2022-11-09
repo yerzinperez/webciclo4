@@ -7,6 +7,7 @@ import { NavbarComponent } from './assets/navbar/navbar.component';
 import { FooterComponent } from './assets/footer/footer.component';
 import { IndexComponent } from './assets/index/index.component';
 import { ErrorComponent } from './assets/error/error.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ErrorComponent } from './assets/error/error.component';
     IndexComponent,
     ErrorComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
