@@ -6,16 +6,36 @@
     </a>
     <ul class="right hide-on-med-and-down">
       <li *ngIf="activeSession">
-        <a routerLink="/estaciones/get">Estaciones</a>
+        <a routerLink="/estaciones/get">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              emoji_transportation
+            </span>
+          </em>Estaciones</a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="rutas/get">Rutas</a>
+        <a routerLink="rutas/get">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              route
+            </span>
+          </em>Rutas</a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="servicios/get">Servicios</a>
+        <a routerLink="servicios/get">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              pin_drop
+            </span>
+          </em>Servicios</a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="admin/get">Usuarios</a>
+        <a routerLink="admin/get">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              group
+            </span>
+          </em>Usuarios</a>
       </li>
       <!-- Sesion -->
       <li *ngIf="!activeSession">
@@ -37,7 +57,12 @@
         </a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="/seguridad/logout">Cerrar sesión</a>
+        <a routerLink="/seguridad/logout">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              logout
+            </span>
+          </em>Cerrar sesión</a>
       </li>
     </ul>
   </div>

@@ -7,7 +7,7 @@
         <h5 class="header col s12 white-text">Sistema de información para el control
           con Uber.</h5>
       </div>
-      <div class="row center">
+      <div *ngIf="!activeSession" class="row center">
         <a routerLink="/seguridad/login" id="download-button"
           class="btn-large waves-effect waves-light indigo darken-4">Iniciar sesión</a>
       </div>
