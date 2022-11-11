@@ -3,20 +3,42 @@
     <a routerLink="/index" id="logo-container" class="brand-logo">
       <img src="https://mintic.gov.co/micrositios/misiontic2022/743/channels-645_logo3d_misiontic.png"
         alt="Logo Misión TIC">
-      <!-- MisionTIC -->
     </a>
     <ul class="right hide-on-med-and-down">
-      <li><a routerLink="/estaciones/get">Estaciones</a></li>
-      <li><a routerLink="rutas/get">Rutas</a></li>
-      <li><a routerLink="servicios/get">Servicios</a></li>
-      <li><a routerLink="admin/get">Usuarios</a></li>
+      <li *ngIf="activeSession">
+        <a routerLink="/estaciones/get">Estaciones</a>
+      </li>
+      <li *ngIf="activeSession">
+        <a routerLink="rutas/get">Rutas</a>
+      </li>
+      <li *ngIf="activeSession">
+        <a routerLink="servicios/get">Servicios</a>
+      </li>
+      <li *ngIf="activeSession">
+        <a routerLink="admin/get">Usuarios</a>
+      </li>
+      <!-- Sesion -->
+      <li *ngIf="!activeSession">
+        <a routerLink="/seguridad/login">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              login
+            </span>
+          </em>Login
+        </a>
+      </li>
+      <li *ngIf="!activeSession">
+        <a routerLink="/admin/create">
+          <em class="large material-icons">
+            <span class="material-symbols-outlined">
+              app_registration
+            </span>
+          </em>Registrarme
+        </a>
+      </li>
+      <li *ngIf="activeSession">
+        <a routerLink="/seguridad/logout">Cerrar sesión</a>
+      </li>
     </ul>
-    <ul id="nav-mobile" class="sidenav">
-      <li><a routerLink="estaciones/get">Estaciones</a></li>
-      <li><a routerLink="rutas/get">Rutas</a></li>
-      <li><a routerLink="servicios/get">Servicios</a></li>
-      <li><a routerLink="admin/get">Usuarios</a></li>
-    </ul>
-    <a data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">X</i></a>
   </div>
 </nav>

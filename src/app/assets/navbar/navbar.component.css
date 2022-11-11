@@ -7,3 +7,12 @@ a.brand-logo img {
   height: 100%;
   ;
 }
+
+ul li a {
+  display: flex;
+  align-items: center;
+}
+
+ul li a em span {
+  margin-right: 4px;
+}

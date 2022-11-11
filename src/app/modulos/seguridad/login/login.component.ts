@@ -25,21 +25,39 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   identificarUsuario() {
+    Swal.fire({
+      title: 'Cargando...',
+      text: 'Por favor, espera...',
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading(Swal.getDenyButton());
+      },
+    });
     let usuario: string = this.fgValidacion.controls['correo'].value as string;
     let clave: string = this.fgValidacion.controls['clave'].value as string;
     let claveCifrada = cryptoJS.MD5(clave).toString();
     this.seguridadService.login(usuario, claveCifrada).subscribe(
       (data: any) => {
         this.seguridadService.almacenarSesion(data);
-        Swal.fire({
+        const Toast = Swal.mixin({
+          toast: true,
           position: 'top-end',
-          icon: 'success',
-          title: 'Bienvenido',
           showConfirmButton: false,
-          timer: 1500,
-        }).then(() => {
-          this.router.navigate(['/index']);
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          },
         });
+
+        Toast.fire({
+          icon: 'success',
+          title: `¡Hola de nuevo ${data.data.nombre} ${data.data.apellidos}!`,
+        });
+        this.router.navigate(['/index']);
       },
       (error: any) => {
         console.log(error);
