@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
           title: '¡Ups! Hubo un error :(',
           text: error.statusText,
           icon: 'error',
-          confirmButtonText: 'Cool',
+          confirmButtonText: 'Cerrar',
         });
       }
     );

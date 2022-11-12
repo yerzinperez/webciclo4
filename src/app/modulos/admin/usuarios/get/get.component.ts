@@ -28,6 +28,7 @@ export class GetComponent implements OnInit {
       title: '¿Está seguro de eliminar este registro?',
       showCancelButton: true,
       confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cancelar',
     }).then((result) => {
       if (result.isConfirmed) {
         this._usuarioService.delete(id).subscribe((data: any) => {

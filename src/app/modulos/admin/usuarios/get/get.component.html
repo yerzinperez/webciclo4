@@ -1,8 +1,19 @@
 <div class="container">
   <br>
-  <a routerLink="/admin/create" class="btn">Registrar Persona</a>
+  <div class="row">
+    <div class="col s3">
+      <a routerLink="/admin/create" class="btn indigo darken-4">
+        <em class="large material-icons">
+          <span class="material-symbols-outlined">
+            group_add
+          </span>
+        </em>
+        <p>Registrar Persona</p>
+      </a>
+    </div>
+  </div>
 
-  <table class="table responsive" aria-describedby="Table for users">
+  <table class="table responsive striped highlight" aria-describedby="Table for users">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -20,8 +31,22 @@
         <td>{{p.correo}}</td>
         <td>{{p.telefono}}</td>
         <td>
-          <a routerLink="/admin/edit/{{p.id}}" class="btn">Editar</a>
-          <button class="btn red" (click)="delete(p.id)">Eliminar</button>
+          <div class="row">
+            <div class="col s3">
+              <a routerLink="/admin/edit/{{p.id}}" class="btn indigo darken-4">
+                <em class="large material-icons"><span class="material-symbols-outlined" style="margin: 0;">
+                    edit
+                  </span>
+                </em></a>
+            </div>
+            <div class="col s4">
+              <button class="btn red" (click)="delete(p.id)"><em class="large material-icons">
+                  <span class="material-symbols-outlined">
+                    delete
+                  </span>
+                </em></button>
+            </div>
+          </div>
         </td>
       </tr>
     </tbody>

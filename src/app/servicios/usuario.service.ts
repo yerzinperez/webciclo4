@@ -24,6 +24,7 @@ export class UsuarioService {
       apellidos: usuario.apellidos,
       telefono: usuario.telefono,
       correo: usuario.correo,
+      contrasenia: '123456',
     });
   }
 
