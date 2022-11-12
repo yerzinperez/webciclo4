@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./get.component.css'],
 })
 export class GetComponent implements OnInit {
+  public boolOpenModal: string = '';
   constructor(private _usuarioService: UsuarioService) {}
   listado: UsuarioModelo[] = [];
   ngOnInit(): void {
@@ -37,5 +38,9 @@ export class GetComponent implements OnInit {
         });
       }
     });
+  }
+
+  openModal() {
+    this.boolOpenModal = 'open';
   }
 }

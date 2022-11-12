@@ -1,69 +1,79 @@
-<nav class="white" role="navigation">
-  <div class="nav-wrapper container">
-    <a routerLink="/index" id="logo-container" class="brand-logo">
-      <img src="https://mintic.gov.co/micrositios/misiontic2022/743/channels-645_logo3d_misiontic.png"
-        alt="Logo Misión TIC">
-    </a>
-    <ul class="right hide-on-med-and-down">
-      <li *ngIf="activeSession">
-        <a routerLink="/estaciones/get">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              emoji_transportation
-            </span>
-          </em>Estaciones</a>
+<div class="navbar-fixed">
+  <ul id="dropdown1" class="dropdown-content" *ngIf="activeSession" (mouseover)="openMenu()" (mouseleave)="closeMenu()">
+    <li *ngIf="activeSession">
+      <a routerLink="/estaciones/get">
+        <em class="large material-icons">
+          <span class="material-symbols-outlined">
+            emoji_transportation
+          </span>
+        </em>Estaciones</a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="rutas/get">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              route
-            </span>
-          </em>Rutas</a>
+      <a routerLink="rutas/get">
+        <em class="large material-icons">
+          <span class="material-symbols-outlined">
+            route
+          </span>
+        </em>Rutas</a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="servicios/get">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              pin_drop
-            </span>
-          </em>Servicios</a>
+      <a routerLink="servicios/get">
+        <em class="large material-icons">
+          <span class="material-symbols-outlined">
+            pin_drop
+          </span>
+        </em>Servicios</a>
       </li>
       <li *ngIf="activeSession">
-        <a routerLink="admin/get">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              group
-            </span>
-          </em>Usuarios</a>
+      <a routerLink="admin/get">
+        <em class="large material-icons">
+          <span class="material-symbols-outlined">
+            group
+          </span>
+        </em>Usuarios</a>
       </li>
-      <!-- Sesion -->
-      <li *ngIf="!activeSession">
-        <a routerLink="/seguridad/login">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              login
-            </span>
-          </em>Login
-        </a>
-      </li>
-      <li *ngIf="!activeSession">
-        <a routerLink="/admin/create">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              app_registration
-            </span>
-          </em>Registrarme
-        </a>
-      </li>
-      <li *ngIf="activeSession">
-        <a routerLink="/seguridad/logout">
-          <em class="large material-icons">
-            <span class="material-symbols-outlined">
-              logout
-            </span>
-          </em>Cerrar sesión</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+  </ul>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a routerLink="/index" id="logo-container" class="brand-logo">
+        <img src="https://mintic.gov.co/micrositios/misiontic2022/743/channels-645_logo3d_misiontic.png"
+          alt="Logo Misión TIC">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="activeSession">
+          <a class="dropdown-trigger" (mouseover)="openMenu()" (mouseleave)="closeMenu()">Menú
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+        <!-- Sesion -->
+        <li *ngIf="!activeSession">
+          <a routerLink="/seguridad/login">
+            <em class="large material-icons">
+              <span class="material-symbols-outlined">
+                login
+              </span>
+            </em>Login
+          </a>
+        </li>
+        <li *ngIf="!activeSession">
+          <a routerLink="/admin/create">
+            <em class="large material-icons">
+              <span class="material-symbols-outlined">
+                app_registration
+              </span>
+            </em>Registrarme
+          </a>
+        </li>
+        <li *ngIf="activeSession">
+          <a routerLink="/seguridad/logout">
+            <em class="large material-icons">
+              <span class="material-symbols-outlined">
+                logout
+              </span>
+            </em>Cerrar sesión
+            </a>
+            </li>
+            </ul>
+            </div>
+            </nav>
+</div>

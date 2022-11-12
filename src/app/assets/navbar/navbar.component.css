@@ -16,3 +16,19 @@ ul li a {
 ul li a em span {
   margin-right: 4px;
 }
+
+.openMenu {
+  display: block;
+  width: 139.297px;
+  left: 874px;
+  top: 64px;
+  /* height: calc(52*4); */
+  transform-origin: 0px 0px;
+  opacity: 1;
+  transform: scaleX(1) scaleY(1);
+}
+
+.dropdown-content li>a,
+.dropdown-content li>span {
+  color: #1A237E;
+}
