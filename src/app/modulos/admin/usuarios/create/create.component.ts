@@ -27,6 +27,16 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {}
 
   store() {
+    Swal.fire({
+      title: 'Cargando...',
+      text: 'Por favor, espera...',
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading(Swal.getDenyButton());
+      },
+    });
     let usuario = new UsuarioModelo();
     usuario.nombre = this.fgValidacion.controls['nombre'].value as string;
     usuario.apellidos = this.fgValidacion.controls['apellidos'].value as string;

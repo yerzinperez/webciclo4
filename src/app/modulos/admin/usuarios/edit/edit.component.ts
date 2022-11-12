@@ -47,6 +47,16 @@ export class EditComponent implements OnInit {
   }
 
   edit() {
+    Swal.fire({
+      title: 'Cargando...',
+      text: 'Por favor, espera...',
+      allowEscapeKey: false,
+      allowOutsideClick: false,
+      showConfirmButton: false,
+      didOpen: () => {
+        Swal.showLoading(Swal.getDenyButton());
+      },
+    });
     let usuario = new UsuarioModelo();
     usuario.id = this.fgValidacion.controls['id'].value as string;
     usuario.nombre = this.fgValidacion.controls['nombre'].value as string;
