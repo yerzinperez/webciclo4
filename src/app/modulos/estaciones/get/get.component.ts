@@ -19,8 +19,6 @@ export class GetComponent implements OnInit {
     try {
       this._estacionService.getAll().subscribe((data: EstacionModelo[]) => {
         this.listado = data;
-        console.log(data);
-        console.log(this.listado);
       });
     } catch (error) {
       alert('error')
