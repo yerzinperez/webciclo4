@@ -66,7 +66,7 @@ export class EditComponent implements OnInit {
 
     this.usuarioService.update(usuario).subscribe(
       (data: UsuarioModelo) => {
-        Swal.fire('Editado Correctamente!', '', 'success');
+        Swal.fire('¡Editado correctamente!', '', 'success');
         this.router.navigate(['/admin/get']);
       },
       (error: any) => {

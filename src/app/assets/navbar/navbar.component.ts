@@ -20,7 +20,6 @@ export class NavbarComponent implements OnInit {
     this.subs = this._seguridadService
       .datosUsuarioSesion()
       .subscribe((data: UsuarioModelo) => {
-        console.log(data);
         this.activeSession = data.isLoggedIn;
       });
   }
