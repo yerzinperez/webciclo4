@@ -36,8 +36,7 @@ export class CreateComponent implements OnInit {
     let ruta = new RutaModelo();
     ruta.origen = this.fgValidacion.controls['origen'].value as string;
     ruta.destino = this.fgValidacion.controls['destino'].value as string;
-    ruta.tiempo_estimado = this.fgValidacion.controls['tiempo_estimado']
-      .value as number;
+    ruta.tiempo_estimado = this.fgValidacion.controls['tiempo_estimado'].value as number;
 
     if(ruta.origen !== ruta.destino){
       Swal.fire({

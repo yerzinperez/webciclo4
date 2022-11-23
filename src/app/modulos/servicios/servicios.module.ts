@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -15,7 +16,9 @@ import { GetComponent } from './get/get.component';
   ],
   imports: [
     CommonModule,
-    ServiciosRoutingModule
+    ServiciosRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ServiciosModule { }

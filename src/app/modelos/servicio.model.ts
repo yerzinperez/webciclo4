@@ -1,10 +1,10 @@
 export class ServicioModelo {
   id?: string;
   fecha?: string;
-  horaInicio?: string;
-  horaFin?: string;
+  hora_inicio?: string;
+  hora_fin?: string;
   placa?: string;
-  nombreConductor?: string;
-  dineroRecogido?: number = 0;
+  nombre_conductor?: string;
+  dinero_recogido?: number;
   ruta?: string;
 }
