@@ -8,7 +8,9 @@ import { SeguridadService } from './seguridad.service';
   providedIn: 'root',
 })
 export class UsuarioService {
-  url = 'http://localhost:3000';
+  // url = 'http://localhost:3000';
+  url = 'https://apiciclo4team2group56.herokuapp.com';
+
   token: string = '';
 
   constructor(
@@ -24,7 +26,7 @@ export class UsuarioService {
       apellidos: usuario.apellidos,
       telefono: usuario.telefono,
       correo: usuario.correo,
-      contrasenia: '123456',
+      contrasenia: '',
     });
   }
 

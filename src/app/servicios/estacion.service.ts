@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class EstacionService {
-  url = 'http://localhost:3000';
+  // url = 'http://localhost:3000';
+  url = 'https://apiciclo4team2group56.herokuapp.com';
   token: string = '';
 
   constructor(

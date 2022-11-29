@@ -28,7 +28,7 @@ export class CreateComponent implements OnInit {
     fecha: ['', [Validators.required]],
     hora_inicio: ['', [Validators.required]],
     hora_fin: ['', [Validators.required]],
-    placa: ['', [Validators.required, Validators.maxLength(6), Validators.minLength(6)]],
+    placa: ['', [Validators.required]],
     nombre_conductor: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(50)]],
     dinero_recogido: [0, [Validators.required, Validators.min(50)]],
     ruta: ['', [Validators.required]],
